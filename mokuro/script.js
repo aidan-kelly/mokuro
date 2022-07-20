@@ -246,6 +246,7 @@ document.getElementById('rightAPage').addEventListener('click', inputRight, fals
 document.getElementById('rightAScreen').addEventListener('click', inputRight, false);
 
 document.addEventListener("keydown", function onEvent(e) {
+    e.preventDefault();
     switch (e.key) {
         case "PageUp":
             prevPage();
@@ -269,6 +270,14 @@ document.addEventListener("keydown", function onEvent(e) {
 
         case "0":
             zoomDefault();
+            break;
+
+        case "ArrowLeft":
+            inputLeft();
+            break;
+
+        case "ArrowRight":
+            inputRight();
             break;
     }
 });
